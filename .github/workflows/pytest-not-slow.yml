@@ -1,4 +1,4 @@
-name: Python package test
+name: Run pytest for not-slow tests
 
 on: [push]
 
@@ -35,4 +35,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest -v
+        pytest -vv -m "not slow"
